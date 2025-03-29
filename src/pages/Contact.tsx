@@ -66,7 +66,7 @@ const handleSubmit = async (e: FormEvent) => {
   
   try {
     // Actual API call to backend
-    const response = await fetch('http://localhost:3001/api/email/contact', {
+    const response = await fetch('https://osiyomeoh-portfoilio.onrender.com/api/email/contact', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

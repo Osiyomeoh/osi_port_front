@@ -7,7 +7,7 @@ class AdminService {
   async login(password: string): Promise<boolean> {
     return new Promise((resolve) => {
       // Create socket connection
-      this.socket = io(process.env.REACT_APP_BACKEND_URL || 'http://localhost:3001');
+      this.socket = io(process.env.REACT_APP_BACKEND_URL || 'https://osiyomeoh-portfoilio.onrender.com');
       
       // Set up login response handler
       this.socket.on('adminLoginResponse', (data: { success: boolean, message: string }) => {

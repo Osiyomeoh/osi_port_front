@@ -51,7 +51,7 @@ const EmailModal: React.FC<EmailModalProps> = ({ isOpen, onClose }) => {
 
     try {
       // Using the confirmed working endpoint
-      const response = await fetch('http://localhost:3001/api/email/contact', {
+      const response = await fetch('https://osiyomeoh-portfoilio.onrender.com/api/email/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

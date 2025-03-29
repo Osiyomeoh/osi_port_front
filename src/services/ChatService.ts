@@ -42,7 +42,7 @@ class ChatService {
     localStorage.setItem('chat_session_id', this.sessionId);
   }
   
-  connect(backendUrl: string = 'http://localhost:3001'): void {
+  connect(backendUrl: string = 'https://osiyomeoh-portfoilio.onrender.com'): void {
     // Initialize socket connection
     this.socket = io(backendUrl);
     
