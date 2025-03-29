@@ -121,8 +121,22 @@
   
   .backend-highlights h4 {
     font-size: 1.3rem;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     color: var(--text-color);
+    text-align: center; /* Center the heading */
+    position: relative;
+    padding-bottom: 15px; /* Add space for the decorative line */
+  }
+  .backend-highlights h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+    border-radius: 3px;
   }
   
   .highlight-points {
@@ -168,3 +182,20 @@
       font-size: 0.8rem;
     }
   }
+
+
+.profile-image {
+  width: 100%;
+  padding-top: 90%; /* Creates a slightly shorter than square aspect ratio */
+  background-image: url('/public/images/profile-placeholder.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: var(--border-radius);
+}
+
+/* Optional: Add hover effect */
+.profile-image:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}

@@ -5,6 +5,7 @@ import AnimatedSkills from '../components/AnimatedSkills';
 
 const About: React.FC = () => {
   const aboutContentRef = useRef<HTMLDivElement>(null);
+  const specializationsRef = useRef<HTMLDivElement>(null);
   
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -21,10 +22,17 @@ const About: React.FC = () => {
     if (aboutContentRef.current) {
       observer.observe(aboutContentRef.current);
     }
+    
+    if (specializationsRef.current) {
+      observer.observe(specializationsRef.current);
+    }
 
     return () => {
       if (aboutContentRef.current) {
         observer.unobserve(aboutContentRef.current);
+      }
+      if (specializationsRef.current) {
+        observer.unobserve(specializationsRef.current);
       }
     };
   }, []);
@@ -33,10 +41,12 @@ const About: React.FC = () => {
     <section className="about-section">
       <div className="container">
         <h2 className="section-title">About Me</h2>
+        
+        {/* Bio section with image and text */}
         <div className="about-content" ref={aboutContentRef}>
           <div className="about-image">
             <div className="profile-wrapper">
-              <img src="/profile-placeholder.jpg" alt="Aleonomoh Samuel" />
+              <div className="profile-image"></div>
               <div className="floating-badge backend-badge">
                 <span>Backend</span>
                 <span>Expert</span>
@@ -63,42 +73,45 @@ const About: React.FC = () => {
               fintech applications, and leadership roles. My DevOps skills further enhance my ability to deliver 
               scalable and secure software solutions.
             </p>
-            
-            <div className="backend-highlights">
-              <h4>Core Specializations</h4>
-              <div className="highlight-points">
-                <div className="highlight-point">
-                  <div className="point-icon">⚙️</div>
-                  <div className="point-text">Microservices Architecture</div>
-                </div>
-                <div className="highlight-point">
-                  <div className="point-icon">🔐</div>
-                  <div className="point-text">Secure API Design</div>
-                </div>
-                <div className="highlight-point">
-                  <div className="point-icon">💹</div>
-                  <div className="point-text">Financial Systems</div>
-                </div>
-                <div className="highlight-point">
-                  <div className="point-icon">⛓️</div>
-                  <div className="point-text">Smart Contracts</div>
-                </div>
-                <div className="highlight-point">
-                  <div className="point-icon">📊</div>
-                  <div className="point-text">Database Optimization</div>
-                </div>
-                <div className="highlight-point">
-                  <div className="point-icon">🚀</div>
-                  <div className="point-text">DevOps & CI/CD</div>
-                </div>
-                <div className="highlight-point">
-                  <div className="point-icon">🔍</div>
-                  <div className="point-text">Testing & Debugging</div>
-                </div>
-                <div className="highlight-point">
-                  <div className="point-icon">👥</div>
-                  <div className="point-text">Team Leadership</div>
-                </div>
+          </div>
+        </div>
+        
+        {/* Core specializations section - moved outside the flex container */}
+        <div className="specializations-section" ref={specializationsRef}>
+          <div className="backend-highlights">
+            <h4>Core Specializations</h4>
+            <div className="highlight-points">
+              <div className="highlight-point">
+                <div className="point-icon">⚙️</div>
+                <div className="point-text">Microservices Architecture</div>
+              </div>
+              <div className="highlight-point">
+                <div className="point-icon">🔐</div>
+                <div className="point-text">Secure API Design</div>
+              </div>
+              <div className="highlight-point">
+                <div className="point-icon">💹</div>
+                <div className="point-text">Financial Systems</div>
+              </div>
+              <div className="highlight-point">
+                <div className="point-icon">⛓️</div>
+                <div className="point-text">Smart Contracts</div>
+              </div>
+              <div className="highlight-point">
+                <div className="point-icon">📊</div>
+                <div className="point-text">Database Optimization</div>
+              </div>
+              <div className="highlight-point">
+                <div className="point-icon">🚀</div>
+                <div className="point-text">DevOps & CI/CD</div>
+              </div>
+              <div className="highlight-point">
+                <div className="point-icon">🔍</div>
+                <div className="point-text">Testing & Debugging</div>
+              </div>
+              <div className="highlight-point">
+                <div className="point-icon">👥</div>
+                <div className="point-text">Team Leadership</div>
               </div>
             </div>
           </div>
