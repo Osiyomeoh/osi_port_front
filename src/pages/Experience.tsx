@@ -16,75 +16,123 @@ const Experience: React.FC = () => {
   const experiences: ExperienceData[] = [
     {
       id: 1,
+      company: "Devcasta",
+      role: "Founder/Team Lead",
+      period: "November 2023 - Present",
+      description: [
+        "Founded and led a dedicated software development team focused on delivering innovative technical solutions",
+        "Orchestrated project workflows and mentored team members while ensuring code quality and standards",
+        "Managed client relationships and translated business requirements into technical specifications"
+      ],
+      technologies: ["Full-Stack Development", "Team Leadership", "Project Management", "Client Relations"]
+    },
+    {
+      id: 2,
+      company: "GuardZero",
+      role: "Founder/Team Lead",
+      period: "September 2023 - Present",
+      description: [
+        "Established a specialized security-focused technology team concentrating on blockchain security",
+        "Led development teams building advanced zero knowledge applications and security solutions",
+        "Implemented rigorous security protocols and testing methodologies for blockchain implementations"
+      ],
+      technologies: ["Blockchain Security", "ZeroKnowledge Proofs", "Smart Contract Auditing", "DeFi Security"]
+    },
+    {
+      id: 3,
+      company: "Whealve Technology Limited",
+      role: "Backend Team Lead",
+      period: "January 2023 - Present",
+      description: [
+        "Directed the backend development team responsible for core system architecture and implementation",
+        "Established coding standards, review processes, and technical documentation practices",
+        "Collaborated with frontend teams to ensure seamless API integration and system performance"
+      ],
+      technologies: ["Backend Architecture", "Team Leadership", "API Design", "Performance Optimization"]
+    },
+    {
+      id: 4,
+      company: "Gradell Technology Limited, Lagos",
+      role: "Chief Executive Officer/CTO",
+      period: "August 2023 - Present",
+      description: [
+        "Led company operations and strategic direction as CEO while overseeing technical implementation as CTO",
+        "Managed diverse teams across technical and business functions",
+        "Drove innovation in software development practices and technology solutions"
+      ],
+      technologies: ["Executive Leadership", "Software Development", "Cloud Architecture", "Business Strategy"]
+    },
+    {
+      id: 5,
       company: "VERNYL LLC, United States",
       role: "Backend Engineer",
-      period: "January 2024 - Present",
+      period: "January 2023 - January 2024",
       description: [
-        "Developed and maintained backend systems, ensuring high performance and responsiveness to front-end requests",
-        "Implemented API integrations and optimized database queries for efficiency",
-        "Collaborated with cross-functional teams to deliver robust solutions"
+        "Developed and maintained robust backend systems for client applications",
+        "Implemented API integrations and optimized database performance",
+        "Collaborated with cross-functional teams to deliver high-quality solutions"
       ],
       technologies: ["PHP", "Laravel", "Node.js", "MySQL", "REST APIs", "Microservices"]
     },
     {
-      id: 2,
-      company: "Gradell Technology Limited, Lagos",
-      role: "Chief Technology Officer / Backend Engineer",
-      period: "August 2023 - Present",
-      description: [
-        "Spearheaded the company's technology strategy, overseeing backend development",
-        "Ensured the delivery of high-quality software solutions",
-        "Managed a team of engineers, fostering a culture of innovation and collaboration"
-      ],
-      technologies: ["Node.js", "TypeScript", "PostgreSQL", "AWS", "CI/CD", "Microservices"]
-    },
-    {
-      id: 3,
+      id: 6,
       company: "Xpactix LLC, United States",
-      role: "Chief Technology Officer and Co-Founder",
-      period: "July 2023 - December 2024",
+      role: "Team Lead",
+      period: "July 2023 - October 2024",
       description: [
-        "Directed the technical vision of the company, overseeing all engineering activities",
-        "Focused on delivering scalable, secure, and efficient software solutions",
-        "Led architecture design and implementation of key systems"
+        "Provided technical leadership for development teams across multiple projects",
+        "Established development methodologies, coding standards, and quality assurance processes",
+        "Served as the primary technical point of contact for stakeholders and managed project timelines"
       ],
-      technologies: ["React", "Node.js", "Cloud Infrastructure", "DevOps", "API Design"]
+      technologies: ["React", "Node.js", "Cloud Infrastructure", "DevOps", "API Design", "Technical Leadership"]
     },
     {
-      id: 4,
+      id: 7,
       company: "Grandida Works, United States",
       role: "Solidity Engineer",
-      period: "June 2022 - June 2024",
+      period: "June 2022 - October 2024",
       description: [
-        "Developed and audited smart contracts on the Ethereum blockchain, ensuring security and efficiency",
-        "Contributed to the design and implementation of decentralized applications (dApps)",
-        "Implemented DeFi protocols and secure financial systems"
+        "Developed secure and efficient smart contracts on Ethereum blockchain",
+        "Designed and implemented decentralized applications (dApps)",
+        "Created and audited DeFi protocols and financial systems on blockchain"
       ],
-      technologies: ["Solidity", "Ethereum", "Web3.js", "Smart Contracts", "DeFi", "dApps"]
+      technologies: ["Solidity", "Ethereum", "Web3.js", "Smart Contracts", "DeFi", "dApps", "Blockchain Security"]
     },
     {
-      id: 5,
+      id: 8,
       company: "Bincom Dev Center, Lagos",
       role: "Back End Developer",
       period: "December 2021 - August 2023",
       description: [
-        "Created and maintained backend services and APIs for various projects",
-        "Collaborated with front-end developers to ensure seamless integration and functionality",
-        "Implemented database optimization strategies and security best practices"
+        "Developed backend services and APIs for various client projects",
+        "Implemented database optimization strategies and security best practices",
+        "Collaborated with frontend teams to ensure seamless integration"
       ],
       technologies: ["PHP", "Yii2", "Laravel", "MySQL", "REST APIs", "GraphQL"]
     },
     {
-      id: 6,
+      id: 9,
       company: "SamTek Global, Lagos",
       role: "Web Developer",
       period: "October 2021 - August 2023",
       description: [
-        "Developed responsive websites, optimizing them for performance and user experience",
-        "Worked closely with clients to gather requirements and deliver tailored web solutions",
-        "Implemented front-end interfaces and back-end functionality"
+        "Created responsive websites optimized for performance and user experience",
+        "Collaborated directly with clients to gather requirements and deliver solutions",
+        "Implemented both frontend interfaces and backend functionality"
       ],
       technologies: ["HTML5", "CSS3", "JavaScript", "PHP", "MySQL", "Responsive Design"]
+    },
+    {
+      id: 10,
+      company: "Wemy Industries Ltd",
+      role: "Electrical Engineer",
+      period: "February 2021 - January 2022",
+      description: [
+        "Managed electrical systems and automation processes",
+        "Implemented equipment maintenance protocols and troubleshooting procedures",
+        "Collaborated with cross-functional teams to optimize production processes"
+      ],
+      technologies: ["Electrical Engineering", "Industrial Automation", "Process Optimization", "Technical Documentation"]
     }
   ];
 
