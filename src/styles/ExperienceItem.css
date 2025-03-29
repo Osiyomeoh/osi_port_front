@@ -1,0 +1,66 @@
+/* File: src/styles/ExperienceItem.css */
+.timeline-item {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 50px;
+  }
+  
+  .timeline-dot {
+    position: absolute;
+    left: -9px;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    border: 3px solid var(--bg-color);
+  }
+  
+  .timeline-content {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 25px;
+    box-shadow: var(--card-shadow);
+  }
+  
+  .timeline-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+    color: var(--text-color);
+  }
+  
+  .timeline-content h4 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+  }
+  
+  .timeline-period {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+  }
+  
+  .timeline-description {
+    margin-bottom: 20px;
+    padding-left: 20px;
+  }
+  
+  .timeline-description li {
+    margin-bottom: 8px;
+    color: var(--text-secondary);
+  }
+  
+  .timeline-technologies {
+    margin-top: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .timeline-item {
+      padding-left: 60px;
+    }
+    
+    .timeline-dot {
+      left: 11px;
+    }
+  }

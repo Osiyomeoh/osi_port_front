@@ -1,0 +1,289 @@
+/* Improved src/styles/Footer.css */
+/* Light mode (default) styling */
+.footer {
+    background-color: #f8fafc; /* Light background for light mode */
+    color: #334155; /* Dark text for light mode */
+    padding: 40px 0 20px;
+    margin-top: auto;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 30px;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+  }
+  
+  .footer-logo {
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+  }
+  
+  .footer-logo a {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1e293b; /* Dark color for light mode */
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .footer-logo span {
+    color: #3b82f6; /* Primary blue for light mode */
+  }
+  
+  .footer-logo p {
+    margin-top: 10px;
+    color: #64748b; /* Lighter text for description */
+    font-size: 0.9rem;
+  }
+  
+  .footer-links {
+    flex: 1;
+    min-width: 150px;
+    max-width: 200px;
+  }
+  
+  .footer-links h3,
+  .footer-social h3 {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    color: #1e293b; /* Dark text for headings */
+  }
+  
+  .footer-links h3::after,
+  .footer-social h3::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: #3b82f6; /* Primary blue for light mode */
+    bottom: -8px;
+    left: 0;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-links li {
+    margin-bottom: 12px;
+  }
+  
+  .footer-links a {
+    color: #475569; /* Medium dark for links */
+    text-decoration: none;
+    transition: all 0.2s ease;
+    font-size: 0.95rem;
+    display: inline-block;
+    position: relative;
+    padding-left: 0;
+  }
+  
+  .footer-links a:hover {
+    color: #3b82f6; /* Primary blue for hover */
+    padding-left: 5px;
+  }
+  
+  .footer-social {
+    flex: 1;
+    min-width: 150px;
+    max-width: 250px;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  
+  .icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(51, 65, 85, 0.1); /* Light background for icons */
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .icon svg {
+    fill: #475569; /* Medium dark for icons */
+  }
+  
+  .icon:hover {
+    background-color: #3b82f6; /* Primary blue for hover */
+    transform: translateY(-5px);
+  }
+  
+  .icon:hover svg {
+    fill: #ffffff; /* White icon on hover */
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(51, 65, 85, 0.1); /* Light border for light mode */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .footer-bottom p {
+    color: #64748b; /* Medium light text */
+    font-size: 0.85rem;
+    margin: 0;
+  }
+  
+  /* Enhanced mobile view */
+  @media (max-width: 768px) {
+    .footer {
+      padding: 30px 0 15px;
+    }
+    
+    .footer-content {
+      flex-direction: column;
+      gap: 25px;
+      text-align: center;
+    }
+    
+    .footer-logo {
+      min-width: 100%;
+      max-width: 100%;
+    }
+    
+    .footer-links {
+      min-width: 100%;
+      max-width: 100%;
+    }
+    
+    .footer-social {
+      min-width: 100%;
+      max-width: 100%;
+    }
+    
+    .footer-links h3::after,
+    .footer-social h3::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .footer-links ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+    
+    .footer-links li {
+      margin-bottom: 0;
+    }
+    
+    .footer-links a {
+      padding: 8px 12px;
+    }
+    
+    .footer-links a:hover {
+      padding-left: 12px;
+      background-color: rgba(51, 65, 85, 0.05); /* Light background hover for mobile */
+      border-radius: 5px;
+    }
+    
+    .social-icons {
+      justify-content: center;
+    }
+  }
+  
+  /* For extremely small devices */
+  @media (max-width: 480px) {
+    .footer-content {
+      gap: 20px;
+    }
+    
+    .footer-links ul {
+      flex-direction: column;
+      gap: 8px;
+    }
+    
+    .icon {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  
+  /* Dark theme overrides */
+  [data-theme="dark"] .footer {
+    background-color: #0f172a; /* Dark blue background */
+  }
+  
+  [data-theme="dark"] .footer-logo a {
+    color: #f8fafc; /* Very light color for logo text */
+  }
+  
+  [data-theme="dark"] .footer-logo span {
+    color: #60a5fa; /* Primary color for dark theme */
+  }
+  
+  [data-theme="dark"] .footer-logo p {
+    color: #94a3b8; /* Lighter text for dark mode */
+  }
+  
+  [data-theme="dark"] .footer-links h3,
+  [data-theme="dark"] .footer-social h3 {
+    color: #f1f5f9; /* Light color for headings */
+  }
+  
+  [data-theme="dark"] .footer-links h3::after,
+  [data-theme="dark"] .footer-social h3::after {
+    background-color: #60a5fa; /* Primary color for dark theme */
+  }
+  
+  [data-theme="dark"] .footer-links a {
+    color: #cbd5e0; /* Light color for links */
+  }
+  
+  [data-theme="dark"] .footer-links a:hover {
+    color: #60a5fa; /* Primary color for dark theme */
+  }
+  
+  [data-theme="dark"] .footer-bottom {
+    border-top-color: rgba(255, 255, 255, 0.05); /* Subtle border in dark mode */
+  }
+  
+  [data-theme="dark"] .footer-bottom p {
+    color: #94a3b8; /* Slightly dimmed text */
+  }
+  
+  [data-theme="dark"] .icon {
+    background-color: rgba(255, 255, 255, 0.05); /* Subtle background for icons */
+  }
+  
+  [data-theme="dark"] .icon svg {
+    fill: #cbd5e0; /* Light fill for icons */
+  }
+  
+  [data-theme="dark"] .icon:hover {
+    background-color: #60a5fa; /* Primary color for dark theme */
+  }
+  
+  [data-theme="dark"] .footer-links a:hover {
+    color: #60a5fa; /* Primary color for dark theme */
+  }
+  
+  @media (max-width: 768px) {
+    [data-theme="dark"] .footer-links a:hover {
+      background-color: rgba(255, 255, 255, 0.05); /* Subtle hover background for mobile */
+    }
+  }

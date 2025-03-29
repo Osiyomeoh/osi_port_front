@@ -1,0 +1,285 @@
+/* File: src/styles/Home.css */
+.hero-section {
+    background: linear-gradient(to right, rgba(10, 25, 47, 0.95), rgba(23, 42, 69, 0.92)), url('/public/images/hero-bg.jpeg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 100px 0;
+  }
+  
+  .particles-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  
+  .particle {
+    position: absolute;
+    opacity: 0.5;
+    animation: float-particle infinite linear;
+    z-index: 1;
+  }
+  
+  .particle.circle {
+    border-radius: 50%;
+  }
+  
+  .particle.square {
+    border-radius: 2px;
+  }
+  
+  .particle.triangle {
+    width: 0 !important;
+    height: 0 !important;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 17px solid currentColor;
+    background-color: transparent !important;
+  }
+  
+  .particle.diamond {
+    transform: rotate(45deg);
+  }
+  
+  @keyframes float-particle {
+    0% {
+      transform: translateY(0) rotate(0);
+      opacity: 0;
+    }
+    10% {
+      opacity: 0.5;
+    }
+    90% {
+      opacity: 0.5;
+    }
+    100% {
+      transform: translateY(-100vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+  
+  .hero-content {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    position: relative;
+    z-index: 2;
+    color: white;
+  }
+  
+  .hero-content h1,
+  .hero-content h2,
+  .hero-content p,
+  .hero-buttons,
+  .tech-stack {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  .hero-content h1.visible,
+  .hero-content h2.visible,
+  .hero-content p.visible,
+  .hero-buttons.visible,
+  .tech-stack.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .hero-content h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    background: linear-gradient(to right, #ffffff, #4facfe);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 5px 15px rgba(0, 112, 243, 0.2);
+  }
+  
+  .hero-content h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .hero-content p {
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+    max-width: 700px;
+    line-height: 1.6;
+  }
+  
+  .hero-content .highlight {
+    color: #4facfe;
+    position: relative;
+    font-weight: 600;
+  }
+  
+  .hero-buttons {
+    margin-bottom: 30px;
+  }
+  
+  .hero-buttons .btn {
+    margin-right: 15px;
+    margin-bottom: 15px;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .hero-buttons .primary-btn {
+    background: linear-gradient(to right, #0070f3, #4facfe);
+    border: none;
+  }
+  
+  .hero-buttons .primary-btn:hover {
+    background: linear-gradient(to right, #005bd1, #4a8edb);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  }
+  
+  .hero-buttons .secondary-btn {
+    background: transparent;
+    border: 2px solid #4facfe;
+    color: white;
+  }
+  
+  .hero-buttons .secondary-btn:hover {
+    background: rgba(79, 172, 254, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  }
+  
+  .tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+  
+  .tech-stack .tech-tag {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-right: 12px;
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+  }
+  
+  .tech-stack .tech-tag:hover {
+    background: rgba(79, 172, 254, 0.2);
+    transform: translateY(-5px);
+  }
+  
+  /* Code Block Styling */
+  .code-block-container {
+    max-width: 700px;
+    margin: 40px auto 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    background-color: #1e1e1e;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  .code-block-container.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .code-header {
+    background-color: #2d2d2d;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #444;
+  }
+  
+  .code-title {
+    color: #fff;
+    font-size: 0.9rem;
+    font-family: 'Fira Code', monospace;
+  }
+  
+  .code-controls {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .code-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+  
+  .code-dot.red {
+    background-color: #ff5f56;
+  }
+  
+  .code-dot.yellow {
+    background-color: #ffbd2e;
+  }
+  
+  .code-dot.green {
+    background-color: #27c93f;
+  }
+  
+  .code-content {
+    padding: 20px;
+    max-height: 400px;
+    overflow-y: auto;
+  }
+  
+  .code-content pre {
+    margin: 0;
+  }
+  
+  [data-theme="dark"] .hero-section {
+    background: linear-gradient(to right, rgba(18, 18, 18, 0.95), rgba(30, 30, 30, 0.92)), url('/public/images/hero-bg.jpeg');
+  }
+  
+  [data-theme="dark"] .code-block-container {
+    background-color: #0d1117;
+  }
+  
+  [data-theme="dark"] .code-header {
+    background-color: #161b22;
+  }
+  
+  [data-theme="dark"] .code-typing {
+    color: #e6edf3;
+  }
+  
+  [data-theme="dark"] .hero-content .highlight {
+    color: #58a6ff;
+  }
+  .code-typing {
+    color: #d4d4d4;
+    font-family: 'Fira Code', 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    overflow: hidden;
+    width: 0;
+  }
+  
+  .code-typing.start-typing {
+    width: 100%;
+    animation: typing 3s steps(500) 1s forwards;
+  }

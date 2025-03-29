@@ -1,0 +1,311 @@
+/* File: src/styles/AnimatedSkills.css */
+.animated-skills-container {
+    margin: 60px 0;
+  }
+  
+  .skills-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .skills-header h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--text-color);
+    position: relative;
+    display: inline-block;
+  }
+  
+  .skills-header h3::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .tab-switcher {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 30px;
+  }
+  
+  .tab-btn {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .tab-btn.active, .tab-btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+  }
+  
+  .skill-card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--card-shadow);
+    transition: all 0.5s ease;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  
+  .skill-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  .skill-icon {
+    font-size: 2rem;
+    margin-right: 15px;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .skill-info {
+    flex: 1;
+  }
+  
+  .skill-info h4 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: var(--text-color);
+  }
+  
+  .skill-level-container {
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .skill-level-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-color), #4facfe);
+    border-radius: 5px;
+    width: 0;
+  }
+  
+  .skill-percentage {
+    position: absolute;
+    right: 0;
+    top: -20px;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+  }
+  
+  /* Backend showcase section */
+  .backend-showcase {
+    margin-top: 80px;
+    padding: 50px 0;
+    background-color: rgba(52, 152, 219, 0.05);
+    border-radius: 20px;
+  }
+  
+  .backend-title {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .backend-title h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: var(--text-color);
+  }
+  
+  .backend-title p {
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .backend-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+  }
+  
+  .backend-features.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .backend-feature {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .backend-feature::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(52, 152, 219, 0.05), rgba(52, 152, 219, 0.2));
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s ease;
+  }
+  
+  .backend-feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .backend-feature:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  
+  .feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    background-color: rgba(52, 152, 219, 0.1);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+  }
+  
+  .backend-feature h4 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: var(--text-color);
+  }
+  
+  .backend-feature p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  
+  /* Code showcase section */
+  .code-showcase {
+    margin-top: 80px;
+  }
+  
+  .code-showcase h3 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: var(--text-color);
+  }
+  
+  .code-container {
+    background-color: var(--code-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+  }
+  
+  .code-container.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .code-tabs {
+    display: flex;
+    background-color: #2d2d2d;
+    border-bottom: 1px solid #444;
+  }
+  
+  .code-tab {
+    background: transparent;
+    border: none;
+    color: #aaa;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  .code-tab.active {
+    background-color: var(--code-bg);
+    color: #fff;
+    border-top: 2px solid var(--primary-color);
+  }
+  
+  .code-display {
+    margin: 0;
+    padding: 20px;
+    max-height: 500px;
+    overflow-y: auto;
+  }
+  
+  .code-display code {
+    color: var(--code-color);
+    font-family: 'Fira Code', 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    white-space: pre-wrap;
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 768px) {
+    .skills-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .backend-features {
+      grid-template-columns: 1fr;
+    }
+    
+    .tab-switcher {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .tab-btn {
+      width: 80%;
+    }
+  }

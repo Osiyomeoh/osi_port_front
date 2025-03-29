@@ -1,0 +1,89 @@
+/* File: src/styles/Projects.css */
+.projects-section {
+    background-color: var(--bg-color);
+    padding: 100px 0 70px;
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  .projects-grid.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .project-card-wrapper {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUpIn 0.8s ease forwards;
+    animation-play-state: paused;
+  }
+  
+  .projects-grid.animate-in .project-card-wrapper {
+    animation-play-state: running;
+  }
+  
+  @keyframes fadeUpIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .github-cta {
+    background-color: var(--dark-bg);
+    color: white;
+    padding: 80px 0;
+    margin-top: 100px;
+  }
+  
+  .github-cta-content {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .github-cta h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .github-cta p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .github-button {
+    display: inline-block;
+    background-color: white;
+    color: var(--dark-bg);
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .github-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  @media (max-width: 768px) {
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .github-cta {
+      padding: 60px 0;
+    }
+  }

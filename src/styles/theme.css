@@ -1,0 +1,60 @@
+/* File: src/styles/theme.css */
+:root {
+    /* Light Theme Colors (Default) */
+    --primary-color: #0070f3;
+    --secondary-color: #6c63ff;
+    --accent-color: #ff4081;
+    --bg-color: #f9f9f9;
+    --card-bg: #ffffff;
+    --dark-bg: #1a1a1a;
+    --text-color: #333;
+    --text-secondary: #666;
+    --text-light: #f4f4f4;
+    --border-color: #e0e0e0;
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --hover-bg: rgba(0, 0, 0, 0.05);
+    --code-bg: #1e1e1e;
+    --code-color: #d4d4d4;
+    --modal-overlay: rgba(0, 0, 0, 0.7);
+    --success-color: #4CAF50;
+    --error-color: #e74c3c;
+  }
+  
+  /* Dark Theme Colors */
+  [data-theme="dark"] {
+    --primary-color: #4facfe;
+    --secondary-color: #8c7dff;
+    --accent-color: #ff6b98;
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --dark-bg: #0a0a0a;
+    --text-color: #e0e0e0;
+    --text-secondary: #aaaaaa;
+    --text-light: #f4f4f4;
+    --border-color: #2c2c2c;
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    --hover-bg: rgba(255, 255, 255, 0.05);
+    --code-bg: #0a0a0a;
+    --code-color: #d4d4d4;
+    --modal-overlay: rgba(0, 0, 0, 0.8);
+    --success-color: #66BB6A;
+    --error-color: #ff5e57;
+  }
+  
+  /* Transition for smooth theme switching */
+  body, a, button, input, textarea, .card, .project-card, .navbar, .footer, 
+  .social-link, .skill-card, .timeline-item, .expertise-point, 
+  .project-link, .project-image img, .social-nav-btn, .chat-toggle,
+  .chat-container, .email-modal, .project-modal, .social-profiles-modal {
+    transition: all 0.3s ease;
+  }
+  
+  /* Add this to all theme-aware components */
+  @media (prefers-reduced-motion) {
+    body, a, button, input, textarea, .card, .project-card, .navbar, .footer, 
+    .social-link, .skill-card, .timeline-item, .expertise-point, 
+    .project-link, .project-image img, .social-nav-btn, .chat-toggle,
+    .chat-container, .email-modal, .project-modal, .social-profiles-modal {
+      transition: none;
+    }
+  }

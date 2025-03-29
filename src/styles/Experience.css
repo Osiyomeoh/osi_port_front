@@ -1,0 +1,26 @@
+/* File: src/styles/Experience.css */
+.experience-section {
+    background-color: var(--bg-color);
+  }
+  
+  .timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 50px auto 0;
+  }
+  
+  .timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background-color: var(--primary-color);
+  }
+  
+  @media (max-width: 768px) {
+    .timeline::before {
+      left: 20px;
+    }
+  }
