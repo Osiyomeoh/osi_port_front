@@ -129,7 +129,7 @@ const handleSubmit = async (e: FormEvent) => {
 };
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText('aleonomohsamuel@example.com');
+    navigator.clipboard.writeText('samuelaleonomoh5@gmail.com');
     alert('Email copied to clipboard!');
   };
 
